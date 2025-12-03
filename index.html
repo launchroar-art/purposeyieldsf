@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>PurposeYield Synergy Foundation - Creating Synergy for Social Change</title>
+ <meta name="description" content="PurposeYield Synergy Foundation empowers underprivileged communities through education, skill development, and social empowerment programs across India.">
+ <script src="https://cdn.tailwindcss.com"></script>
+ <style>
+ .slide {
+ opacity: 0;
+ transition: opacity 1s ease-in-out;
+ position: absolute;
+ width: 100%;
+ }
+ .slide.active {
+ opacity: 1;
+ }
+ .fade-in {
+ animation: fadeIn 1s ease-in;
+ }
+ @keyframes fadeIn {
+ from { opacity: 0; transform: translateY(20px); }
+ to { opacity: 1; transform: translateY(0); }
+ }
+ </style>
+</head>
+<body class="bg-gradient-to-b from-green-50 to-white">
+ <!-- Header -->
+ <header class="bg-green-600 text-white shadow-lg">
+ <div class="container mx-auto px-4 py-6">
+ <div class="flex items-center gap-3">
+ <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+ </svg>
+ <div>
+ <h1 class="text-2xl md:text-3xl font-bold">PurposeYield Synergy Foundation</h1>
+ <p class="text-green-100 text-sm">Creating Synergy for Social Change</p>
+ </div>
+ </div>
+ </div>
+ </header>
+
+ <!-- Hero Slideshow -->
+ <section class="relative bg-gradient-to-r from-green-500 to-teal-600 text-white py-20 overflow-hidden">
+ <div class="container mx-auto px-4">
+ <div class="relative h-64 flex items-center justify-center">
+ <!-- Slide 1 -->
+ <div class="slide active" id="slide1">
+ <div class="flex flex-col items-center justify-center text-center">
+ <svg class="w-16 h-16 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+ </svg>
+ <h2 class="text-4xl md:text-5xl font-bold mb-4">Building Brighter Futures</h2>
+ <p class="text-xl md:text-2xl text-green-100">Empowering underprivileged communities through education and skill development</p>
+ </div>
+ </div>
+
+ <!-- Slide 2 -->
+ <div class="slide" id="slide2">
+ <div class="flex flex-col items-center justify-center text-center">
+ <svg class="w-16 h-16 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+ </svg>
+ <h2 class="text-4xl md:text-5xl font-bold mb-4">Creating Opportunities</h2>
+ <p class="text-xl md:text-2xl text-green-100">Vocational training and employment support for sustainable livelihoods</p>
+ </div>
+ </div>
+
+ <!-- Slide 3 -->
+ <div class="slide" id="slide3">
+ <div class="flex flex-col items-center justify-center text-center">
+ <svg class="w-16 h-16 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+ </svg>
+ <h2 class="text-4xl md:text-5xl font-bold mb-4">Digital Empowerment</h2>
+ <p class="text-xl md:text-2xl text-green-100">Bridging the digital divide with technology education and training</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- Slide Indicators -->
+ <div class="flex justify-center gap-2 mt-8">
+ <button onclick="showSlide(0)" class="w-3 h-3 rounded-full bg-white transition-all" id="indicator0"></button>
+ <button onclick="showSlide(1)" class="w-3 h-3 rounded-full bg-green-300 transition-all" id="indicator1"></button>
+ <button onclick="showSlide(2)" class="w-3 h-3 rounded-full bg-green-300 transition-all" id="indicator2"></button>
+ </div>
+
+ <!-- Navigation Buttons -->
+ <button onclick="previousSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 transition">
+ <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+ </svg>
+ </button>
+ <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 rounded-full p-2 transition">
+ <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+ </svg>
+ </button>
+ </div>
+ </section>
+
+ <!-- About Section -->
+ <section class="py-16 bg-white">
+ <div class="container mx-auto px-4">
+ <div class="max-w-4xl mx-auto fade-in">
+ <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">About Our Foundation</h2>
+ <div class="bg-green-50 rounded-lg p-8 shadow-md">
+ <p class="text-lg text-gray-700 leading-relaxed mb-6">
+ PurposeYield Synergy Foundation is committed to transforming lives through education, skill development, and social empowerment. We work with underprivileged communities, particularly children from slums, rural, and tribal areas, to provide them with opportunities for a better future.
+ </p>
+ <p class="text-lg text-gray-700 leading-relaxed">
+ As a Section 8 company registered under the Companies Act, 2013, we operate with the vision of creating sustainable social impact through collaborative efforts in education, healthcare, and community development across India.
+ </p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Core Programs -->
+ <section class="py-16 bg-gray-50">
+ <div class="container mx-auto px-4">
+ <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Our Core Programs</h2>
+ <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+ <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+ <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+ <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+ </svg>
+ </div>
+ <h3 class="text-xl font-bold text-gray-800 mb-3">Education for All</h3>
+ <p class="text-gray-600">Free quality education through schools, learning centers, and libraries focusing on basic and digital education for underprivileged children.</p>
+ </div>
+
+ <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+ <div class="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+ <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+ </svg>
+ </div>
+ <h3 class="text-xl font-bold text-gray-800 mb-3">Skill Training</h3>
+ <p class="text-gray-600">Vocational training programs in tailoring, data entry, digital marketing, and spoken English to enable employment and entrepreneurship.</p>
+ </div>
+
+ <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+ <div class="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+ <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+ </svg>
+ </div>
+ <h3 class="text-xl font-bold text-gray-800 mb-3">Social Empowerment</h3>
+ <p class="text-gray-600">Promoting gender equality, women empowerment, and youth development through community-based education and skill-building activities.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Services Section -->
+ <section class="py-16 bg-white">
+ <div class="container mx-auto px-4">
+ <div class="max-w-4xl mx-auto">
+ <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Our Services & Support</h2>
+ <div class="grid md:grid-cols-2 gap-6">
+ <div class="flex gap-4">
+ <div class="text-green-600 mt-1 text-xl">✓</div>
+ <div>
+ <h4 class="font-semibold text-gray-800 mb-2">Digital Literacy Programs</h4>
+ <p class="text-gray-600">Computer training for children and adults to enable digital self-reliance</p>
+ </div>
+ </div>
+ <div class="flex gap-4">
+ <div class="text-green-600 mt-1 text-xl">✓</div>
+ <div>
+ <h4 class="font-semibold text-gray-800 mb-2">Educational Resources</h4>
+ <p class="text-gray-600">Scholarships, books, uniforms, and digital devices for deserving students</p>
+ </div>
+ </div>
+ <div class="flex gap-4">
+ <div class="text-green-600 mt-1 text-xl">✓</div>
+ <div>
+ <h4 class="font-semibold text-gray-800 mb-2">Career Development</h4>
+ <p class="text-gray-600">Career counseling, personality development, and interview training programs</p>
+ </div>
+ </div>
+ <div class="flex gap-4">
+ <div class="text-green-600 mt-1 text-xl">✓</div>
+ <div>
+ <h4 class="font-semibold text-gray-800 mb-2">Employment Assistance</h4>
+ <p class="text-gray-600">Job placement support and micro-entrepreneurship opportunities for trained individuals</p>
+ </div>
+ </div>
+ <div class="flex gap-4">
+ <div class="text-green-600 mt-1 text-xl">✓</div>
+ <div>
+ <h4 class="font-semibold text-gray-800 mb-2">Healthcare Initiatives</h4>
+ <p class="text-gray-600">Supporting medical camps, health awareness, and wellness programs in communities</p>
+ </div>
+ </div>
+ <div class="flex gap-4">
+ <div class="text-green-600 mt-1 text-xl">✓</div>
+ <div>
+ <h4 class="font-semibold text-gray-800 mb-2">Community Outreach</h4>
+ <p class="text-gray-600">Workshops and campaigns promoting education and skill development awareness</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- Call to Action -->
+ <section class="py-16 bg-gradient-to-r from-green-500 to-teal-600 text-white">
+ <div class="container mx-auto px-4 text-center">
+ <h2 class="text-3xl md:text-4xl font-bold mb-4">Join Us in Making a Difference</h2>
+ <p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+ Together, we can create opportunities and transform lives through education and empowerment
+ </p>
+ </div>
+ </section>
+
+ <!-- Footer -->
+ <footer class="bg-gray-800 text-white py-8">
+ <div class="container mx-auto px-4">
+ <div class="text-center">
+ <h3 class="text-xl font-bold mb-2">PurposeYield Synergy Foundation</h3>
+ <p class="text-gray-400 mb-4">Registered under Section 8, Companies Act 2013</p>
+ <p class="text-gray-400 mb-2">Registered Office: Uttar Pradesh, India</p>
+ <p class="text-gray-400 text-sm">© 2025 PurposeYield Synergy Foundation. All rights reserved.</p>
+ </div>
+ </div>
+ </footer>
+
+ <script>
+ let currentSlide = 0;
+ const slides = document.querySelectorAll('.slide');
+ const indicators = document.querySelectorAll('[id^="indicator"]');
+ const totalSlides = slides.length;
+
+ function showSlide(index) {
+ slides.forEach(slide => slide.classList.remove('active'));
+ indicators.forEach(ind => {
+ ind.classList.remove('bg-white', 'w-8');
+ ind.classList.add('bg-green-300', 'w-3');
+ });
+
+ slides[index].classList.add('active');
+ indicators[index].classList.remove('bg-green-300', 'w-3');
+ indicators[index].classList.add('bg-white', 'w-8');
+ currentSlide = index;
+ }
+
+ function nextSlide() {
+ currentSlide = (currentSlide + 1) % totalSlides;
+ showSlide(currentSlide);
+ }
+
+ function previousSlide() {
+ currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+ showSlide(currentSlide);
+ }
+
+ // Auto-advance slides
+ setInterval(nextSlide, 4000);
+ </script>
+</body>
+</html>
